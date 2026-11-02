@@ -27,7 +27,7 @@ int fibo=int.Parse(Console.ReadLine());
 
 int Fibonacci(int n)
 {
-    for (int i = 2; i < n; i++)
+    for (int i = 2; i <= n; i++)
         list.Add(list[i - 1] + list[i - 2]);
 
     return list[n];
