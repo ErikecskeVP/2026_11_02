@@ -35,3 +35,42 @@ int Fibonacci(int n)
 }
 
 Console.WriteLine(Fibonacci(fibo));
+
+List<char> spec_karakterek = new() { '.', '-', '_' };
+Console.Write("Kérem a jelszót: ");
+string jelszo = Console.ReadLine();
+int erosseg(string password)
+{
+    int strength = 1;
+
+    if (password.Length >= 5)
+    {
+        strength += 1;  
+    }
+    
+    if (password.Length >= 8)
+    {
+        strength += 2; 
+    }
+
+  
+    foreach (char karakter in password)
+    {
+        if (spec_karakterek.Contains(karakter))
+        {
+            strength += 2;
+           
+        }
+    }
+    if (password.Contains("jelszo"))
+    {
+        strength = 0;
+    }
+    if (password.Contains("123"))
+    {
+        strength = 0;
+    }
+    return strength;
+}
+
+Console.WriteLine(erosseg(jelszo));
