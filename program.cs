@@ -35,7 +35,7 @@ int Fibonacci(int n)
 }
 
 Console.WriteLine(Fibonacci(fibo));
-
+Console.WriteLine()
 List<char> spec_karakterek = new() { '.', '-', '_' };
 Console.Write("Kérem a jelszót: ");
 string jelszo = Console.ReadLine();
@@ -74,7 +74,7 @@ int erosseg(string password)
 }
 
 Console.WriteLine(erosseg(jelszo));
-
+Console.WriteLine()
 Console.Write("Adjon meg egy szöveget: ");
 
 string szoveg=Console.ReadLine();
@@ -99,6 +99,7 @@ string maganhangzotorol(string s)
 
 Console.WriteLine(maganhangzotorol(szoveg));
 
+Console.WriteLine()
 Console.Write("Adja meg a titkosítani kivánt szöveget: ");
 string szoveg2 = Console.ReadLine();
 Console.Write("Adja meg hány karakterrel szertné eltolni a szöveget: ");
