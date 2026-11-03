@@ -74,3 +74,50 @@ int erosseg(string password)
 }
 
 Console.WriteLine(erosseg(jelszo));
+
+Console.Write("Adjon meg egy szöveget: ");
+
+string szoveg=Console.ReadLine();
+string maganhangzotorol(string s)
+{
+    string eredmeny = "";
+    string maganhangzok = "aeiouáéíóöőúüű";
+
+    foreach (char c in s)
+    {
+        if (maganhangzok.Contains(c))
+        {
+            continue;
+        }
+        else
+        {
+            eredmeny += c;
+        }
+    }
+    return eredmeny;
+}
+
+Console.WriteLine(maganhangzotorol(szoveg));
+
+Console.Write("Adja meg a titkosítani kivánt szöveget: ");
+string szoveg2 = Console.ReadLine();
+Console.Write("Adja meg hány karakterrel szertné eltolni a szöveget: ");
+int db=int.Parse(Console.ReadLine());
+Console.Write("Add meg a karaktert amit használni szeretnél a titkosításhoz: ");
+char karakter1 = char.Parse(Console.ReadLine());
+
+string titkosit(string s, int db, char karakter)
+{
+    string eredmeny = "";
+    foreach (char c in s)
+    {
+        eredmeny += c;
+        for (int i = 0; i < db; i++)
+        {
+            eredmeny += karakter;
+        }
+    }
+    return eredmeny;
+}
+
+Console.WriteLine(titkosit(szoveg2, db, karakter1));
